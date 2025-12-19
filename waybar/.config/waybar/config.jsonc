@@ -1,0 +1,98 @@
+{
+  "layer": "top",
+  "margin-top": 2,
+  "width": 1905,
+  "modules-left": ["custom/launcher", "hyprland/workspaces" ],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu","network", "pulseaudio/slider","custom/notification","custom/power"],
+
+  "clock": {
+    "format": "  {:%H:%M:%S} ",  // 24‑hour with seconds (official syntax)
+    "interval": 1,            // refresh per second
+    "tooltip-format": "{:%A, %d %B %Y %H:%M:%S}"  // optional nice tooltip
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "scroll-step": 5,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle", // Toggle mute on click instead!
+    "on-click-right": "pavucontrol" // Keep pavucontrol on right-click for emergencies 🚨
+  },
+
+  // Add this module right after pulseaudio in your 'modules-right'
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  },
+  "network": {
+    "interface": "enp4s0",            // auto‑detect default interface
+    "interval": 1,               // update every second
+    "format-wifi": " ",
+    "format-ethernet": " 󰈀 ",
+    "format-disconnected": " 󰖪 ",
+    "tooltip": true,
+    "tooltip-format": "{ifname} {ipaddr}"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",      // Nerd Font: Terminal
+      "2": "",      // Nerd Font: Firefox/Browser
+      "3": "",      // Nerd Font: Programming Space
+      "4": "",      // Nerd Font: Files/Folders Stuff
+      "5": "",      // Nerd Font: Miscellaneous
+      "6": "",      // Nerd Font: Music/ Audio 
+      "7": "",      // Nerd Font: Video Space
+      "active": "", // Nerd Font: active workspace
+      "default": "" // Nerd Font: inactive workspace
+    },
+    "persistent-workspaces": {
+      "*": 7,        // 5 workspaces by default on every monitor
+      "HDMI-A-1": 7  // 5 workspaces on HDMI-A-1
+    }
+  },
+
+  "custom/launcher": {
+    // We boost the size to 'x-large' and use 'rise' to align it perfectly
+    "format": "<span size='x-large' rise='-1500'></span>", 
+    "tooltip": "Application Menu",
+    "on-click": "~/.config/rofi/launchers/type-2/launcher.sh || pkill rofi"
+  },
+  "custom/power": {
+    "format": "⏻ ",
+    "on-click": "~/.config/waybar/scripts/power-menu.sh",
+    "tooltip": false
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "  "
+  },
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='16pt'>{icon}</span>",
+    "format-icons": {
+      "notification": " 󰅸",
+      "none": " ",
+      "dnd-notification": " 󰪓",
+      "dnd-none": " 󰪓",
+      "inhibited-notification": " 󰂛",
+      "inhibited-none": " 󰪑",
+      "dnd-inhibited-notification": " 󰂛",
+      "dnd-inhibited-none": " 󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
+
+
+}
