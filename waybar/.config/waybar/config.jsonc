@@ -4,7 +4,7 @@
   "width": 1905,
   "modules-left": ["custom/launcher", "hyprland/workspaces" ],
   "modules-center": ["clock"],
-  "modules-right": ["cpu","network", "pulseaudio/slider","custom/notification","custom/power"],
+  "modules-right": ["cpu", "temperature", "network", "pulseaudio/slider","custom/notification","custom/power"],
 
   "clock": {
     "format": "  {:%H:%M:%S} ",  // 24‑hour with seconds (official syntax)
@@ -33,9 +33,10 @@
     "interface": "enp4s0",            // auto‑detect default interface
     "interval": 1,               // update every second
     "format-wifi": " ",
-    "format-ethernet": " 󰈀 ",
+    "format-ethernet": " 󰈀 {bandwidthDownBits}",
     "format-disconnected": " 󰖪 ",
     "tooltip": true,
+    "align": 0,
     "tooltip-format": "{ifname} {ipaddr}"
   },
 
@@ -49,7 +50,7 @@
       "5": "",      // Nerd Font: Miscellaneous
       "6": "",      // Nerd Font: Music/ Audio 
       "7": "",      // Nerd Font: Video Space
-      "active": "", // Nerd Font: active workspace
+      "active": "", // N3rd Font: active workspace
       "default": "" // Nerd Font: inactive workspace
     },
     "persistent-workspaces": {
@@ -71,8 +72,17 @@
   },
   "cpu": {
     "interval": 1,
-    "format": "  "
+    "format": "  {usage}% "
   },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 85,
+    "interval": 5,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""],
+    "min-length": 6
+  },
+
   "custom/notification": {
     "tooltip": true,
     "format": "<span size='16pt'>{icon}</span>",

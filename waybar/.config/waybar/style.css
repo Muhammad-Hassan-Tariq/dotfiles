@@ -56,6 +56,11 @@ tooltip label {
   min-width: 80px;
 }
 
+#network {
+  min-width: 100px;
+  padding-left: 5px;
+}
+
 #custom-launcher {
   padding-left: 8px;
   padding-right: 14px;
@@ -74,8 +79,7 @@ tooltip label {
 }
 
 #pulseaudio-slider {
-  min-width: 100px; /* Essential! */
-  margin: 0 10px;
+  min-width: 80px; /* Essential! */
 }
 
 #pulseaudio-slider trough {
@@ -88,4 +92,11 @@ tooltip label {
   min-height: 10px;
   background-color: #15a1d4; /* Blue accent */
   border-radius: 5px;
+}
+
+#cpu {
+  padding-right: 8px;
+}
+#temperature {
+  padding-right: 5px;
 }
