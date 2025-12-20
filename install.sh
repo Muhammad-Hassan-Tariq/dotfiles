@@ -6,12 +6,12 @@
 echo "🚀 Starting the Great Restoration..."
 
 # 1. Install Yay (AUR Helper) if not present
-if ! command -v yay &> /dev/null; then
-    echo "📦 Installing yay..."
-    sudo pacman -S --needed git base-devel
-    git clone https://aur.archlinux.org/yay.git
-    cd yay && makepkg -si --noconfirm
-    cd .. && rm -rf yay
+if ! command -v yay &>/dev/null; then
+  echo "📦 Installing yay..."
+  sudo pacman -S --needed git base-devel
+  git clone https://aur.archlinux.org/yay.git
+  cd yay && makepkg -si --noconfirm
+  cd .. && rm -rf yay
 fi
 
 # 2. Update System
@@ -20,10 +20,14 @@ yay -Syu --noconfirm
 # 3. Install Technical Stack & Rice Components
 echo "🛠️ Installing Core Packages..."
 PACKAGES=(
-    "hyprland" "hyprshade" "waybar" "swaync" "rofi-wayland" "kitty" 
-    "neovim" "stow" "btop" "thunar" "pavucontrol" "brightnessctl"
-    "bluez" "bluez-utils" "networkmanager" "grim" "slurp" # Screenshot tools
-    "ttf-font-awesome" "otf-font-awesome" "ttf-nerd-fonts-symbols-common" # Icons!
+  "hyprland" "hyprshade" "waybar" "swaync" "rofi-wayland" "kitty"
+  "neovim" "stow" "btop" "thunar" "pavucontrol" "brightnessctl"
+  "bluez" "bluez-utils" "networkmanager" "grim" "slurp"                 # Screenshot tools
+  "ttf-font-awesome" "otf-font-awesome" "ttf-nerd-fonts-symbols-common" # Icons!
+  "nwg-look" "adw-gtk-theme" "papirus-icon-theme"
+  "swww" "hyprshade" "cliphist" "wl-clipboard"
+  "xdg-desktop-portal-hyprland" # Critical for screen sharing/visuals!
+  "qt5-wayland" "qt6-wayland"   # To stop Qt apps from flickering
 )
 
 yay -S --noconfirm "${PACKAGES[@]}"
@@ -33,8 +37,8 @@ echo "🔗 Linking configurations..."
 cd ~/dotfiles
 # This loop stows every folder in your dotfiles directory
 for dir in */; do
-    stow -t ~ "$dir"
-    echo "✅ Stowed $dir"
+  stow -t ~ "$dir"
+  echo "✅ Stowed $dir"
 done
 
 echo "🥋 Setup Complete, Hassan! Your system is now 'A-Class'."

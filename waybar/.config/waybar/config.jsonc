@@ -72,6 +72,7 @@
   },
   "cpu": {
     "interval": 1,
+    "align": 0,
     "format": "  {usage}% "
   },
   "temperature": {
@@ -85,7 +86,7 @@
 
   "custom/notification": {
     "tooltip": true,
-    "format": "<span size='16pt'>{icon}</span>",
+    "format": "<span size='12pt'>{icon}</span>",
     "format-icons": {
       "notification": " 󰅸",
       "none": " ",
@@ -107,9 +108,7 @@
     "format": "{}",
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/stm32_dfu.sh",
-    "interval": 2,
+    "interval": 1,
     "tooltip": false
-},
-
-
+  },
 }

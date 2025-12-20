@@ -23,7 +23,7 @@ window#waybar {
 }
 .modules-center {
   background-color: rgba(25, 53, 83, 0.5);
-  padding: 0px 9px;
+  padding: 0px 12px;
 }
 
 
@@ -53,7 +53,7 @@ tooltip label {
 
 
 #clock {
-  min-width: 80px;
+  min-width: 80px;    
 }
 
 #network {
@@ -79,17 +79,17 @@ tooltip label {
 }
 
 #pulseaudio-slider {
-  min-width: 80px; /* Essential! */
+  min-width: 60px; /* Essential! */
 }
 
 #pulseaudio-slider trough {
-  min-height: 10px;
+  min-height: 6px;
   background-color: #313244; /* Dark background */
   border-radius: 5px;
 }
 
 #pulseaudio-slider highlight {
-  min-height: 10px;
+  min-height: 6px;
   background-color: #15a1d4; /* Blue accent */
   border-radius: 5px;
 }
@@ -98,7 +98,6 @@ tooltip label {
   padding-right: 8px;
 }
 #temperature {
-  padding-right: 5px;
 }
 
 #custom-stm32 {
