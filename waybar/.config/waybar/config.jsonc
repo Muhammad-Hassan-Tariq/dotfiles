@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "margin-top": 2,
+  "margin-top": 4,
   "width": 1905,
   "modules-left": ["custom/launcher", "hyprland/workspaces" ],
   "modules-center": ["clock"],

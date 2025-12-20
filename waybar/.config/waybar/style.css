@@ -14,15 +14,15 @@ window#waybar {
 }
 
 .modules-left {
-  background-color: rgba(40, 40, 40, 0.7);
+  background-color: rgba(25, 53, 83, 0.5);
   padding: 0px 7px;
 }
 .modules-right {
-  background-color: rgba(40, 40, 40, 0.7);
+  background-color: rgba(25, 53, 83, 0.5);
   padding: 0px 9px;
 }
 .modules-center {
-  background-color: rgba(40, 40, 40, 0.7);
+  background-color: rgba(25, 53, 83, 0.5);
   padding: 0px 9px;
 }
 
