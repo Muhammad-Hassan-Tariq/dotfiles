@@ -100,3 +100,13 @@ tooltip label {
 #temperature {
   padding-right: 5px;
 }
+
+#custom-stm32 {
+    color: #ffffff; /* Clean White */
+    background: #193549; /* Cobalt2 Blue */
+    padding: 0 12px;
+    border-radius: 15px;
+    /* A tiny yellow underline—just a hint of the lightning bolt ⚡ */
+    border-bottom: 1px solid #ffc600; 
+    font-weight: bold;
+}

@@ -4,7 +4,7 @@
   "width": 1905,
   "modules-left": ["custom/launcher", "hyprland/workspaces" ],
   "modules-center": ["clock"],
-  "modules-right": ["cpu", "temperature", "network", "pulseaudio/slider","custom/notification","custom/power"],
+  "modules-right": ["custom/stm32", "cpu", "temperature", "network", "pulseaudio/slider","custom/notification","custom/power"],
 
   "clock": {
     "format": "  {:%H:%M:%S} ",  // 24‑hour with seconds (official syntax)
@@ -102,7 +102,14 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  }
+  },
+  "custom/stm32": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/stm32_dfu.sh",
+    "interval": 2,
+    "tooltip": false
+},
 
 
 }
