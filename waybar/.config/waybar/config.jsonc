@@ -43,11 +43,11 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "1": "",      // Nerd Font: Terminal
+      "1": "",      // Nerd Font: Terminal
       "2": "",      // Nerd Font: Firefox/Browser
       "3": "",      // Nerd Font: Programming Space
       "4": "",      // Nerd Font: Files/Folders Stuff
-      "5": "",      // Nerd Font: Miscellaneous
+      "5": "",      // Nerd Font: Miscellaneous
       "6": "",      // Nerd Font: Music/ Audio 
       "7": "",      // Nerd Font: Video Space
       "active": "", // N3rd Font: active workspace
