@@ -1,7 +1,8 @@
 {
   "layer": "top",
   "margin-top": 4,
-  "width": 1905,
+  "margin-left": 4,
+  "margin-right": 4,
   "modules-left": ["custom/launcher", "hyprland/workspaces" ],
   "modules-center": ["clock"],
   "modules-right": ["custom/stm32", "cpu", "temperature", "network", "pulseaudio/slider","custom/notification","custom/power"],
