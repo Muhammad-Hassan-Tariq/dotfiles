@@ -48,7 +48,7 @@ export LS_COLORS="$LS_COLORS:ow=30;44:"  # Fix color for 777-permission director
 alias runtr='(cd $HOME/Tools/TriliumNotes/TriliumNotes && ./trilium.sh)'
 
 # Updat & push dotfiles to Github
-alias dotsync='cd $HOME/dotfiles && git add . && git commit -m "Update rice 🍚" && git push && cd -'
+alias dotsync='cd $HOME/dotfiles && git add . && git commit -m "Update rice" && git push && cd -'
 
 # Downloading shortcut using aria2c
 alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"
@@ -130,6 +130,9 @@ export LESS_TERMCAP_ue=$'\E[0m'      # reset
 setopt numericglobsort
 setopt interactivecomments
 setopt nonomatch
+
+# Open man pages inside NVIM
+export MANPAGER='nvim +Man'
 
 # ============================================================
 # End of .zshrc
