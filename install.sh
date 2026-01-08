@@ -4,7 +4,7 @@
 # Technical Stack: Hyprland, Zsh, NVIDIA, Greetd, STM32-Ready
 # Logic: Install AUR helper -> Install Packages -> Stow Configs -> Setup Greetd
 
-echo "🚀 Starting the Great Restoration..."
+echo "Starting the Great Restoration..."
 
 # 1. Install Yay (AUR Helper) if not present
 if ! command -v yay &>/dev/null; then
@@ -19,19 +19,19 @@ fi
 yay -Syu --noconfirm
 
 # 3. Install Verified Technical Stack & Rice Components
-echo "🛠️ Installing Core Packages..."
+echo "Installing Core Packages..."
 PACKAGES=(
   # Verified UI & Rice 🎨
   "hyprland" "waybar" "swaync" "rofi-wayland" "kitty" "neovim" "stow"
   "btop" "thunar" "pavucontrol" "grim" "slurp" "swww" "hyprshade"
-  "cliphist" "wl-clipboard" "nwg-look" "adw-gtk-theme" "papirus-icon-theme"
+  "cliphist" "nwg-look" "adw-gtk-theme" "papirus-icon-theme"
 
-  # System & Drivers 🏎️
+  # System & Drivers
   "networkmanager" "dhcpcd" "nvidia-open-dkms" "libva-nvidia-driver"
   "xdg-desktop-portal-hyprland" "qt5-wayland" "qt6-wayland" "greetd"
   "greetd-tuigreet" # AUR frontend for greetd
 
-  # Shell & Fonts 🐚
+  # Shell & Fonts
   "zsh" "zsh-autosuggestions" "zsh-syntax-highlighting"
   "ttf-font-awesome" "ttf-nerd-fonts-symbols-common"
 )
@@ -55,7 +55,7 @@ done
 
 # 5. Set Zsh as default shell 🐚
 if [[ $SHELL != "/usr/bin/zsh" ]]; then
-  echo "🐚 Switching to Zsh..."
+  echo "Switching to Zsh..."
   chsh -s $(which zsh)
 fi
 
@@ -89,5 +89,5 @@ sudo systemctl enable nvidia-suspend.service
 sudo usermod -aG video greeter
 
 echo "✅ Services enabled!"
-echo "🥋 Setup Complete, Hassan! System is now 'A-Class'."
+echo "Setup Complete, Hassan! System is now 'A-Class'."
 echo "🔄 Rebooting is recommended."
