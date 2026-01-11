@@ -107,7 +107,7 @@ bindkey '^[[Z' undo                 # Shift+Tab to undo
 # Environment Variables
 # -----------------------------
 # -----------------------------
-# Browser & GUI Optimizations 🚀
+# Browser & GUI Optimizations
 # -----------------------------
 export MOZ_ENABLE_WAYLAND=1        # The most important flag for Zen!
 export MOZ_DBUS_REMOTE=1           # Improves IPC communication
