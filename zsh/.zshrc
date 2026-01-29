@@ -134,9 +134,6 @@ setopt numericglobsort
 setopt interactivecomments
 setopt nonomatch
 
-# Open man pages inside NVIM
-export MANPAGER='nvim +Man'
-
 # ============================================================
 # End of .zshrc
 # ============================================================
