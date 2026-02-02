@@ -56,6 +56,9 @@ alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"
 # Initialize the Embedded Cortex
 alias init-cortex='cd $HOME/ && ./stm32_workspace.sh'
 
+# Run Budget script
+alias budget='(cd $HOME/Tools/Personal-DBs/Budget && ./script.sh)'
+
 # The "Cheat Sheet" via `curl`
 cheat() { curl -s cheat.sh/"$*" }
 
