@@ -94,7 +94,7 @@ fi
 # Keybindings (Emacs-style)
 # -----------------------------
 # Navigation and editing shortcuts
-bindkey -e                         # Use emacs keybindings
+bindkey -e                          # Use emacs keybindings
 bindkey '^U' backward-kill-line     # Ctrl+U to delete entire line
 bindkey '^[[3;5~' kill-word         # Ctrl+Delete to delete word
 bindkey '^[[3~' delete-char         # Delete key
@@ -104,7 +104,7 @@ bindkey '^[[5~' beginning-of-buffer-or-history  # Page Up for start of history
 bindkey '^[[6~' end-of-buffer-or-history        # Page Down for end of history
 bindkey '^[[H' beginning-of-line   # Home
 bindkey '^[[F' end-of-line         # End
-bindkey '^[[Z' undo                 # Shift+Tab to undo
+bindkey '^[[Z' undo                # Shift+Tab to undo
 
 # -----------------------------
 # Environment Variables
@@ -112,10 +112,10 @@ bindkey '^[[Z' undo                 # Shift+Tab to undo
 # -----------------------------
 # Browser & GUI Optimizations
 # -----------------------------
-export MOZ_ENABLE_WAYLAND=1        # The most important flag for Zen!
-export MOZ_DBUS_REMOTE=1           # Improves IPC communication
-export MOZ_DISABLE_RDD_SANDBOX=1   # Helps NVIDIA hardware decoding
-export EGL_PLATFORM=wayland         # Forces the correct rendering backend
+export MOZ_ENABLE_WAYLAND=1                      # The most important flag for Zen!
+export MOZ_DBUS_REMOTE=1                         # Improves IPC communication
+export MOZ_DISABLE_RDD_SANDBOX=1                 # Helps NVIDIA hardware decoding
+export EGL_PLATFORM=wayland                      # Forces the correct rendering backend
 
 # -----------------------------
 # Powerlevel10k Configuration
