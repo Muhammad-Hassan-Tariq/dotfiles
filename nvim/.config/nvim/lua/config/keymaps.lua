@@ -2,7 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- Jump to next line while adding semicolon
 vim.keymap.set("i", "jj", "<Esc>", { desc = "Exit Insert Mode" })
 
 -- Jump word backward/forward in Insert mode

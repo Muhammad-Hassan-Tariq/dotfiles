@@ -1,6 +1,6 @@
 * {
   border: none;
-  border-radius: 15px;
+  border-radius: 12px;
   font-family: "JetBrainsMono Nerd Font Propo" , Helvetica, Arial, sans-serif;
   font-size: 13px;
   min-height: 0;
@@ -19,7 +19,7 @@ window#waybar {
 }
 .modules-right {
   background-color: rgba(25, 53, 83, 0.5);
-  padding: 0px 9px;
+  padding: 0px 8px;
 }
 .modules-center {
   background-color: rgba(25, 53, 83, 0.5);
