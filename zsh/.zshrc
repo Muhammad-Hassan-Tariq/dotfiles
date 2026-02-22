@@ -44,8 +44,8 @@ alias la='exa -A --icons --color=always --group-directories-first'
 alias lg='exa -la --icons --color=always --group-directories-first --git'
 alias tree='exa --tree --icons --color=always --group-directories-first'
 
-alias tree_copy='exa --tree --icons --color=always --group-directories-first | wl-copy'
-alias ls_copy='exa --icons --color=always --group-directories-first | wl-copy'
+alias treecpy='exa --tree --icons --color=always --group-directories-first | wl-copy'
+alias lscpy='exa --icons --color=always --group-directories-first | wl-copy'
 
 # Fuzzy Finder with Preview
 alias ff='fd --type f | fzf --preview "bat --color=always --style=header,grid {}"'
