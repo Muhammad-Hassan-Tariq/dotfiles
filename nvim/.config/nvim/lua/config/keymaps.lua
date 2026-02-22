@@ -7,5 +7,5 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { silent = true })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
 
 -- Jump word backward/forward in Insert mode
-vim.keymap.set("i", "<C-h>", "<C-o>b", { noremap = true, silent = true }) -- jump back one word
 vim.keymap.set("i", "<C-l>", "<C-o>w", { noremap = true, silent = true }) -- jump forward one word
+vim.keymap.set("i", "<C-h>", "<C-o>b", { noremap = true, silent = true }) -- jump back one word
