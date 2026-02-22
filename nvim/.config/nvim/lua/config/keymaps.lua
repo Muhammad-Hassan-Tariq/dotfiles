@@ -3,6 +3,8 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("i", "jj", "<Esc>", { desc = "Exit Insert Mode" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { silent = true })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
 
 -- Jump word backward/forward in Insert mode
 vim.keymap.set("i", "<C-h>", "<C-o>b", { noremap = true, silent = true }) -- jump back one word

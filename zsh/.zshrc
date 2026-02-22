@@ -36,13 +36,17 @@ zstyle ':completion:*' verbose true
 # -----------------------------
 # Aliases and LS Colors
 # -----------------------------
-# Colorize output of ls and other commands
-alias ls='ls --color=auto --group-directories-first'
-alias ll='ls -l --group-directories-first'
-alias lla='ls -la --group-directories-first'
-alias la='ls -A --group-directories-first'
-alias l='ls -CF --group-directories-first'
-export LS_COLORS="$LS_COLORS:ow=30;44:"  # Fix color for 777-permission directories
+# EXA Command
+alias ls='exa --icons --color=always --group-directories-first'
+alias ll='exa -l --icons --color=always --group-directories-first'
+alias lla='exa -la --icons --color=always --group-directories-first'
+alias la='exa -A --icons --color=always --group-directories-first'
+alias lg='exa -la --icons --color=always --group-directories-first --git'
+alias tree='exa --tree --icons --color=always --group-directories-first'
+alias tree_copy='exa --tree --icons --color=always --group-directories-first | wl-copy'
+
+# Fuzzy Finder with Preview
+alias ff='fd --type f | fzf --preview "bat --color=always --style=header,grid {}"'
 
 # Start Trilium Notes Server Instance
 alias runtr='(cd $HOME/Tools/TriliumNotes/TriliumNotes && ./trilium.sh)'
