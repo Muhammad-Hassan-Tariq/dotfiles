@@ -42,6 +42,17 @@ if lspci | grep -iq nvidia; then
     PACKAGES+=( nvidia-open-dkms libva-nvidia-driver xdg-desktop-portal-hyprland qt5-wayland qt6-wayland )
 fi
 
+# --- Microcode Detection ---
+if grep -q "Intel" /proc/cpuinfo; then
+    echo "💙 Intel CPU detected, adding intel-ucode..."
+    PACKAGES+=( intel-ucode )
+elif grep -q "AMD" /proc/cpuinfo; then
+    echo "❤️ AMD CPU detected, adding amd-ucode..."
+    PACKAGES+=( amd-ucode )
+fi
+
+# Add efibootmgr for bootloader management
+PACKAGES+=( efibootmgr )
 yay -S --needed --noconfirm "${PACKAGES[@]}"
 
 # --- Stow Configs ---
@@ -74,6 +85,15 @@ for svc in nvidia-hibernate.service nvidia-resume.service nvidia-suspend.service
         sudo systemctl enable "$svc"
     fi
 done
+
+# --- systemd-boot Auto-update Hook ---
+echo "⚙️ Creating Pacman hook for systemd-boot..."
+
+# Ensure the directory exists
+sudo mkdir -p /etc/pacman.d/hooks
+
+# Enable Systemd-Boot auto update
+sudo systemctl enable systemd-boot-update.service 
 
 # Add greeter to video group
 sudo usermod -aG video greeter
