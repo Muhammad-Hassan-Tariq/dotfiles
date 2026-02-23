@@ -86,14 +86,11 @@ for svc in nvidia-hibernate.service nvidia-resume.service nvidia-suspend.service
     fi
 done
 
-# --- systemd-boot Auto-update Hook ---
-echo "⚙️ Creating Pacman hook for systemd-boot..."
+# --- systemd-boot Auto-update Strategy ---
+echo "⚙️ Configuring systemd-boot automation..."
 
-# Ensure the directory exists
-sudo mkdir -p /etc/pacman.d/hooks
-
-# Enable Systemd-Boot auto update
-sudo systemctl enable systemd-boot-update.service 
+# Sync on Boot
+sudo systemctl enable systemd-boot-update.service
 
 # Add greeter to video group
 sudo usermod -aG video greeter
