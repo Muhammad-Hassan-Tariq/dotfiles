@@ -28,7 +28,7 @@ fi
 
 # --- Core Packages ---
 PACKAGES=(
-    hyprland waybar swaync rofi-wayland kitty
+    hyprland waybar rofi-wayland kitty
     neovim stow btop thunar pavucontrol
     grim slurp swww hyprshade cliphist
     sudo linux linux-headers networkmanager dhcpcd
