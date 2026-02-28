@@ -51,7 +51,7 @@ alias lscpy='exa --icons --color=always --group-directories-first | wl-copy'
 alias ff='fd --type f | fzf --preview "bat --color=always --style=header,grid {}"'
 
 # Start Trilium Notes Server Instance
-alias runtr='(cd $HOME/Tools/TriliumNotes/TriliumNotes && ./trilium.sh)'
+alias runtr='(cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh)'
 
 # Updat & push dotfiles to Github
 alias dotsync='cd $HOME/dotfiles && git add . && git commit -m "Update rice" && git push && cd -'
@@ -61,9 +61,6 @@ alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"
 
 # Compile & Execute main.cpp File
 alias exec_cpp='g++ ./main.cpp -o output && ./output'
-
-# Pipe to wl-copy
-alias copy='| wl-copy'
 
 # The "Cheat Sheet" via `curl`
 cheat() { curl -s cheat.sh/"$*" }
