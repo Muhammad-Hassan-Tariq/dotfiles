@@ -11,7 +11,6 @@ SAVEHIST=10000                # Max commands saved to disk
 
 # History behavior
 setopt INC_APPEND_HISTORY     # Immediately append commands to history file
-setopt SHARE_HISTORY          # Share history across multiple terminals
 setopt HIST_IGNORE_DUPS       # Ignore duplicate commands in history
 setopt HIST_IGNORE_SPACE      # Ignore commands starting with a space
 setopt hist_expire_dups_first # Remove older duplicates when history is full
