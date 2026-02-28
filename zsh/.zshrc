@@ -28,6 +28,12 @@ else
   compinit -C     # Fast check (every other time)
 fi
 
+# Compile the completion dump to binary for even more speed
+zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
+if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
+  zcompile "$zcompdump"
+fi
+
 # Menu-style completion and matching
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' auto-description 'specify: %d'
