@@ -21,10 +21,11 @@ setopt hist_verify            # Show command after expansion before executing
 # -----------------------------
 # Faster completion loading ⚡
 autoload -Uz compinit
-if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.m1) ]]; then
-  compinit
+# Check if .zcompdump is older than 24 hours
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh-24) ]]; then
+  compinit        # Heavy check (once a day)
 else
-  compinit -C
+  compinit -C     # Fast check (every other time)
 fi
 
 # Menu-style completion and matching
