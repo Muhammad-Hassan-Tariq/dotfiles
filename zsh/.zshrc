@@ -60,7 +60,18 @@ alias dotsync='cd $HOME/dotfiles && git add . && git commit -m "Update rice" && 
 alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"
 
 # Compile & Execute main.cpp File
-alias exec_cpp='g++ ./main.cpp -o output && ./output'
+cpprun() {
+    local file="${1:-main.cpp}"
+    local out="${file%.*}.out"
+    # -Wall -Wextra: Essential for catching bugs early in CS projects
+    # -O2: Standard optimization level
+    if g++ -std=c++20 -Wall -Wextra -O2 "$file" -o "$out"; then
+        echo "🚀 Compilation successful. Running $out..."
+        ./"$out"
+    else
+        echo "❌ Compilation failed."
+    fi
+}
 
 # The "Cheat Sheet" via `curl`
 cheat() { curl -s cheat.sh/"$*" }
