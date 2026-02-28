@@ -35,16 +35,16 @@ zstyle ':completion:*' verbose true
 # -----------------------------
 # Aliases and LS Colors
 # -----------------------------
-# EXA Command
-alias ls='exa --icons --color=always --group-directories-first'
-alias ll='exa -l --icons --color=always --group-directories-first'
-alias lla='exa -la --icons --color=always --group-directories-first'
-alias la='exa -A --icons --color=always --group-directories-first'
-alias lg='exa -la --icons --color=always --group-directories-first --git'
-alias tree='exa --tree --icons --color=always --group-directories-first'
+# EZA Command
+alias ls='eza --icons --color=always --group-directories-first'
+alias la='eza -A --icons --color=always --group-directories-first'
+alias ll='eza -l --icons --color=always --group-directories-first'
+alias lla='eza -la --icons --color=always --group-directories-first'
+alias lg='eza -la --icons --color=always --group-directories-first --git'
+alias tree='eza --tree --icons --color=always --group-directories-first'
 
-alias treecpy='exa --tree --icons --color=always --group-directories-first | wl-copy'
-alias lscpy='exa --icons --color=always --group-directories-first | wl-copy'
+alias treecpy='eza --tree --icons --color=always --group-directories-first | wl-copy'
+alias lscpy='eza --icons --color=always --group-directories-first | wl-copy'
 
 # Fuzzy Finder with Preview
 alias ff='fd --type f | fzf --preview "bat --color=always --style=header,grid {}"'
