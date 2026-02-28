@@ -21,10 +21,11 @@ setopt hist_verify            # Show command after expansion before executing
 # -----------------------------
 # Faster completion loading ⚡
 autoload -Uz compinit
-for dump in ~/.zcompdump(N.m1); do
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.m1) ]]; then
   compinit
-done
-compinit -C
+else
+  compinit -C
+fi
 
 # Menu-style completion and matching
 zstyle ':completion:*:*:*:*:*' menu select
@@ -100,10 +101,10 @@ bindkey -e                          # Use emacs keybindings
 bindkey '^U' backward-kill-line     # Ctrl+U to delete entire line
 bindkey '^[[3;5~' kill-word         # Ctrl+Delete to delete word
 bindkey '^[[3~' delete-char         # Delete key
-bindkey '^[[1;5C' forward-word      # Ctrl+Right to move word forward
-bindkey '^[[1;5D' backward-word     # Ctrl+Left to move word backward
 bindkey '^[[5~' beginning-of-buffer-or-history  # Page Up for start of history
 bindkey '^[[6~' end-of-buffer-or-history        # Page Down for end of history
+bindkey '^L' forward-word          # Ctrl+L
+bindkey '^H' backward-word         # Ctrl+H
 bindkey '^[[H' beginning-of-line   # Home
 bindkey '^[[F' end-of-line         # End
 bindkey '^[[Z' undo                # Shift+Tab to undo
