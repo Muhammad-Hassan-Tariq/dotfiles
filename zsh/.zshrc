@@ -57,6 +57,9 @@ alias lscpy='eza --icons --color=always --group-directories-first | wl-copy'
 # Fuzzy Finder with Preview
 alias ff='fd --type f | fzf --preview "bat --color=always --style=header,grid {}"'
 
+# Search History with Fuzzy Finder
+alias ffhist='cd $HOME && cat .zsh_history | fzf'
+
 # Start Trilium Notes Server Instance
 alias runtr='(cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh)'
 
