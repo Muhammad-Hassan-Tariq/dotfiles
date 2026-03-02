@@ -21,12 +21,9 @@ setopt hist_verify            # Show command after expansion before executing
 # -----------------------------
 # Faster completion loading ⚡
 autoload -Uz compinit
-# Check if .zcompdump is older than 24 hours
-if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh-24) ]]; then
-  compinit        # Heavy check (once a day)
-else
-  compinit -C     # Fast check (every other time)
-fi
+# Ignore insecure directories (important if you’re using Arch + Hyprland + powerlevel10k)
+zstyle ':completion:*' rehash true
+compinit -u
 
 # Compile the completion dump to binary for even more speed
 zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
@@ -135,8 +132,9 @@ bindkey '^H' backward-word          # Ctrl+H
 bindkey '^[[H' beginning-of-line    # Home
 bindkey '^[[F' end-of-line          # End
 bindkey '^_ ' undo                  # Ctrl+_ to undo
-bindkey '^I' autosuggest-accept     # Ctrl+I Autocomplete 
-bindkey '^E' autosuggest-execute    # Ctrl+E Autocomplete & Execute
+bindkey '\eOP' autosuggest-execute    # Ctrl+E Autocomplete & Execute
+bindkey '\eOQ' autosuggest-execute    # Ctrl+E Autocomplete & Execute
+bindkey '^I' expand-or-complete     # Tab Completion
 
 # -----------------------------
 # Environment Variables
