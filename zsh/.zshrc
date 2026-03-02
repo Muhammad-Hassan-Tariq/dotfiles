@@ -73,6 +73,9 @@ alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"
 alias EDIT_HYPRLAND='nvim $HOME/.config/hypr/hyprland.conf'
 alias EDIT_ZSHRC='nvim $HOME/.zshrc'
 
+# CPP Workspace
+alias CPP_WORKSPACE='nvim $HOME/programming/__eagle__ cortex/main.cpp'
+
 # Compile & Execute main.cpp File
 cpprun() {
     local file="${1:-main.cpp}"
