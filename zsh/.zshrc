@@ -48,8 +48,9 @@ alias lla='eza -la --icons --color=always --group-directories-first'
 alias lg='eza -la --icons --color=always --group-directories-first --git'
 alias tree='eza --tree --icons --color=always --group-directories-first'
 
-alias treecpy='eza --tree --icons --color=always --group-directories-first | wl-copy'
-alias lscpy='eza --icons --color=always --group-directories-first | wl-copy'
+alias treecpy='/bin/tree | wl-copy'
+alias lscpy='/bin/ls -l --group-directories-first | wl-copy'
+alias lscpyall='/bin/ls -la --group-directories-first | wl-copy'
 
 # CD Command
 alias ..='cd ..'
