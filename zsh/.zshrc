@@ -51,6 +51,10 @@ alias tree='eza --tree --icons --color=always --group-directories-first'
 alias treecpy='eza --tree --icons --color=always --group-directories-first | wl-copy'
 alias lscpy='eza --icons --color=always --group-directories-first | wl-copy'
 
+# CD Command
+alias ..='cd ..'
+alias ...='cd ../..'
+
 # Fuzzy Finder with Preview
 alias ff='fd --type f | fzf --preview "bat --color=always --style=header,grid {}"'
 
@@ -67,8 +71,8 @@ alias dotsync='cd $HOME/dotfiles && git add . && git commit -m "Update rice" && 
 alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"
 
 # Shortcuts to EDIT Configs
-alias EDIT_HYPRLAND='nvim $HOME/.config/hypr/hyprland.conf'
-alias EDIT_ZSHRC='nvim $HOME/.zshrc'
+alias e_hyprland='nvim $HOME/.config/hypr/hyprland.conf'
+alias e_zshrc='nvim $HOME/.zshrc'
 
 # CPP Workspace
 alias CPP_WORKSPACE='nvim "$HOME/programming/__eagle__ cortex/main.cpp"'
