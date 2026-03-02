@@ -74,7 +74,7 @@ alias EDIT_HYPRLAND='nvim $HOME/.config/hypr/hyprland.conf'
 alias EDIT_ZSHRC='nvim $HOME/.zshrc'
 
 # CPP Workspace
-alias CPP_WORKSPACE='nvim $HOME/programming/__eagle__ cortex/main.cpp'
+alias CPP_WORKSPACE='nvim "$HOME/programming/__eagle__ cortex/main.cpp"'
 
 # Compile & Execute main.cpp File
 cpprun() {
@@ -127,15 +127,16 @@ fi
 # Navigation and editing shortcuts
 bindkey -e                          # Use emacs keybindings
 bindkey '^U' backward-kill-line     # Ctrl+U to delete entire line
-bindkey '^[[3;5~' kill-word         # Ctrl+Delete to delete word
+bindkey '^[OP' backward-kill-word # Ctrl+Backspace
+bindkey '^[[1;5C' kill-word          # Ctrl+Delete
 bindkey '^[[3~' delete-char         # Delete key
-bindkey '^[[5~' beginning-of-buffer-or-history  # Page Up for start of history
-bindkey '^[[6~' end-of-buffer-or-history        # Page Down for end of history
-bindkey '^L' forward-word          # Ctrl+L
-bindkey '^H' backward-word         # Ctrl+H
-bindkey '^[[H' beginning-of-line   # Home
-bindkey '^[[F' end-of-line         # End
-bindkey '^[[Z' undo                # Shift+Tab to undo
+bindkey '^L' forward-word           # Ctrl+L
+bindkey '^H' backward-word          # Ctrl+H
+bindkey '^[[H' beginning-of-line    # Home
+bindkey '^[[F' end-of-line          # End
+bindkey '^_ ' undo                  # Ctrl+_ to undo
+bindkey '^I' autosuggest-accept     # Ctrl+I Autocomplete 
+bindkey '^E' autosuggest-execute    # Ctrl+E Autocomplete & Execute
 
 # -----------------------------
 # Environment Variables
