@@ -69,6 +69,10 @@ alias dotsync='cd $HOME/dotfiles && git add . && git commit -m "Update rice" && 
 # Downloading shortcut using aria2c
 alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"
 
+# Shortcuts to EDIT Configs
+alias EDIT_HYPRLAND='nvim $HOME/.config/hypr/hyprland.conf'
+alias EDIT_ZSHRC='nvim $HOME/.zshrc'
+
 # Compile & Execute main.cpp File
 cpprun() {
     local file="${1:-main.cpp}"
