@@ -5,7 +5,7 @@
   "margin-right": 4,
   "modules-left": ["custom/launcher", "hyprland/workspaces" ],
   "modules-center": ["clock"],
-  "modules-right": ["custom/stm32", "cpu", "temperature", "network", "pulseaudio/slider","custom/notification","custom/power"],
+  "modules-right": ["cpu", "temperature", "network", "pulseaudio/slider","custom/notification","custom/power"],
 
   "clock": {
     "format": "  {:%H:%M:%S} ",  // 24‑hour with seconds (official syntax)
@@ -31,7 +31,7 @@
     "orientation": "horizontal"
   },
   "network": {
-    "interface": "enp4s0",            // auto‑detect default interface
+    "interface": "enp3s0",            // auto‑detect default interface
     "interval": 1,               // update every second
     "format-wifi": " ",
     "format-ethernet": " 󰈀 {bandwidthDownBits}",
@@ -55,8 +55,8 @@
       "default": "" // Nerd Font: inactive workspace
     },
     "persistent-workspaces": {
-      "*": 7,        // 5 workspaces by default on every monitor
-      "HDMI-A-1": 7  // 5 workspaces on HDMI-A-1
+      "*": 7,        // 7 workspaces by default on every monitor
+      "HDMI-A-1": 7  // 7 workspaces on HDMI-A-1
     }
   },
 
@@ -83,13 +83,5 @@
     "format": "{icon} {temperatureC}°C",
     "format-icons": ["", "", ""],
     "min-length": 6
-  },
-
-  "custom/stm32": {
-    "format": "{}",
-    "return-type": "json",
-    "exec": "~/.config/waybar/scripts/stm32_dfu.sh",
-    "interval": 1,
-    "tooltip": false
-  },
+  }
 }

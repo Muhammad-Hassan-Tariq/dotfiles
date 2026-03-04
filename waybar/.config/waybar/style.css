@@ -26,12 +26,11 @@ window#waybar {
   padding: 0px 12px;
 }
 
-
-
 tooltip {
   background: rgba(43, 48, 59, 0.5);
   border: 1px solid rgba(100, 114, 125, 0.5);
 }
+
 tooltip label {
   color: white;
 }
@@ -54,11 +53,13 @@ tooltip label {
 
 #clock {
   min-width: 80px;    
+  color: white;
 }
 
 #network {
-  min-width: 100px;
+  min-width: 110px;
   padding-left: 5px;
+  color: white;
 }
 
 #custom-launcher {
@@ -96,8 +97,10 @@ tooltip label {
 
 #cpu {
   padding-right: 8px;
+  color: white;
 }
 #temperature {
+  color: white;
 }
 
 #custom-stm32 {
