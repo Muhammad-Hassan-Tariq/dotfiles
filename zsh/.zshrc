@@ -129,16 +129,16 @@ fi
 # Navigation and editing shortcuts
 bindkey -e                          # Use emacs keybindings
 bindkey '^U' backward-kill-line     # Ctrl+U to delete entire line
-bindkey '^[OP' backward-kill-word # Ctrl+Backspace
-bindkey '^[[1;5C' kill-word          # Ctrl+Delete
+bindkey '^[OP' backward-kill-word   # Ctrl+Backspace
+bindkey '^[[1;5C' kill-word         # Ctrl+Delete
 bindkey '^[[3~' delete-char         # Delete key
 bindkey '^L' forward-word           # Ctrl+L
 bindkey '^H' backward-word          # Ctrl+H
 bindkey '^[[H' beginning-of-line    # Home
 bindkey '^[[F' end-of-line          # End
 bindkey '^_ ' undo                  # Ctrl+_ to undo
-bindkey '\eOP' autosuggest-execute    # Ctrl+E Autocomplete & Execute
-bindkey '\eOQ' autosuggest-execute    # Ctrl+E Autocomplete & Execute
+bindkey '\eOP' forward-char         # Ctrl+E Autocomplete & Execute
+bindkey '\eOQ' autosuggest-execute  # Ctrl+E Autocomplete & Execute
 bindkey '^I' expand-or-complete     # Tab Completion
 
 # -----------------------------
