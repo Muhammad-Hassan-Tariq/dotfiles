@@ -31,7 +31,7 @@
     "orientation": "horizontal"
   },
   "network": {
-    "interface": "enp3s0",            // auto‑detect default interface
+    "interface": "enp4s0",            // auto‑detect default interface
     "interval": 1,               // update every second
     "format-wifi": " ",
     "format-ethernet": " 󰈀 {bandwidthDownBits}",
