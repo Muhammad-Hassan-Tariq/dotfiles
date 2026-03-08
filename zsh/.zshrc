@@ -10,9 +10,12 @@ HISTSIZE=10000                # Max commands kept in memory
 SAVEHIST=10000                # Max commands saved to disk
 
 # History behavior
-setopt INC_APPEND_HISTORY     # Immediately append commands to history file
+setopt SHARE_HISTORY          # Imports new commands from the file and appends them
+setopt HIST_SAVE_NO_DUPS      # Do not write a duplicate event to the history file
+setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks from history strings
 setopt HIST_IGNORE_DUPS       # Ignore duplicate commands in history
 setopt HIST_IGNORE_SPACE      # Ignore commands starting with a space
+setopt HIST_IGNORE_ALL_DUPS   # Ignore all Duplicates
 setopt hist_expire_dups_first # Remove older duplicates when history is full
 setopt hist_verify            # Show command after expansion before executing
 
@@ -60,10 +63,10 @@ alias ...='cd ../..'
 alias ff='fd --type f | fzf --preview "bat --color=always --style=header,grid {}"'
 
 # Search History with Fuzzy Finder
-alias ffhist='cd $HOME && cat .zsh_history | fzf'
+alias ffhist='cd $HOME && cat .zsh_history | fzf | wl-copy'
 
 # Start Trilium Notes Server Instance
-alias runtr='(cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh)'
+alias runtr='cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh'
 
 # Updat & push dotfiles to Github
 alias dotsync='cd $HOME/dotfiles && git add . && git commit -m "Update rice" && git push && cd -'
