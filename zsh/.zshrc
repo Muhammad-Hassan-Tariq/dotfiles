@@ -88,7 +88,7 @@ cpprun() {
     # -Wall -Wextra: Essential for catching bugs early in CS projects
     # -O2: Standard optimization level
     if g++ -std=c++20 -Wall -Wextra -O2 "$file" -o "$out"; then
-        echo "🚀 Compilation successful. Running $out..."
+        echo "✅ Compilation successful. Running $out..."
         ./"$out"
     else
         echo "❌ Compilation failed."
@@ -160,7 +160,7 @@ export EGL_PLATFORM=wayland                      # Forces the correct rendering 
 # Load user-specific Powerlevel10k settings if available
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-# 🎨 Colorize 'less' and 'man' pages (Pure eye-candy)
+# Colorize 'less' and 'man' pages (Pure eye-candy)
 export LESS_TERMCAP_mb=$'\E[1;31m'   # blink -> red
 export LESS_TERMCAP_md=$'\E[1;36m'   # bold -> cyan
 export LESS_TERMCAP_me=$'\E[0m'      # reset
