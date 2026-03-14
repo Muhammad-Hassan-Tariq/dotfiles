@@ -83,18 +83,43 @@ alias CPP_WORKSPACE='nvim "$HOME/programming/__eagle__ cortex/main.cpp"'
 
 # Compile & Execute main.cpp File
 cpprun() {
-    local file="${1:-main.cpp}"
+    # Default settings
+    local file="main.cpp"
+    local debug=0
+
+    # Parse arguments
+    for arg in "$@"; do
+        if [[ "$arg" == "--debug" ]]; then
+            debug=1
+        else
+            file="$arg"
+        fi
+    done
+
     local out="${file%.*}.out"
-    # -Wall -Wextra: Essential for catching bugs early in CS projects
-    # -O2: Standard optimization level
+
+    # Colors
     GREEN='\033[0;32m'
     CYAN='\033[0;36m'
     RED='\033[0;31m'
-    if g++ -std=c++20 -Wall -Wextra -O2 "$file" -o "$out"; then
-        echo "${GREEN}✅ Compilation successful. Running $out...${NC}${CYAN}"
-        ./"$out"
+    NC='\033[0m'
+
+    if [[ $debug -eq 1 ]]; then
+        # Debug compile
+        if g++ -std=c++20 -Wall -Wextra -O2 -g "$file" -o "$out"; then
+            echo -e "${GREEN}✅ Compilation successful (debug). Debugging $out...${NC}"
+            gdb -tui ./"$out"
+        else
+            echo -e "${RED}❌ Compilation failed.${NC}"
+        fi
     else
-        echo "${RED}❌ Compilation failed.${NC}"
+        # Release compile
+        if g++ -std=c++20 -Wall -Wextra -O2 "$file" -o "$out"; then
+            echo -e "${GREEN}✅ Compilation successful. Running $out...${NC}"
+            ./"$out"
+        else
+            echo -e "${RED}❌ Compilation failed.${NC}"
+        fi
     fi
 }
 
