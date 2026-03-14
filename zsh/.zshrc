@@ -106,7 +106,7 @@ cpprun() {
 
     if [[ $debug -eq 1 ]]; then
         # Debug compile
-        if g++ -std=c++20 -Wall -Wextra -O2 -g "$file" -o "$out"; then
+        if g++ -std=c++20 -Wall -Wextra -O0 -g "$file" -o "$out"; then
             echo -e "${GREEN}✅ Compilation successful (debug). Debugging $out...${NC}"
             gdb "$out"
         else
