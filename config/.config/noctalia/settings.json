@@ -110,7 +110,7 @@
                     "useDistroLogo": false
                 },
                 {
-                    "clockColor": "none",
+                    "clockColor": "tertiary",
                     "customFont": "CaskaydiaCove NFM",
                     "formatHorizontal": "HH:mm:ss",
                     "formatVertical": "HH mm - dd MM",
@@ -159,7 +159,7 @@
                     "showNetworkStats": true,
                     "showSwapUsage": false,
                     "textColor": "none",
-                    "useMonospaceFont": true,
+                    "useMonospaceFont": false,
                     "usePadding": false
                 },
                 {
@@ -652,7 +652,7 @@
         "boxBorderEnabled": false,
         "fontDefault": "CaskaydiaCove Nerd Font Mono",
         "fontDefaultScale": 1,
-        "fontFixed": "JetBrainsMono Nerd Font Mono",
+        "fontFixed": "JetBrainsMono NF",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 0.6,
         "panelsAttachedToBar": false,
