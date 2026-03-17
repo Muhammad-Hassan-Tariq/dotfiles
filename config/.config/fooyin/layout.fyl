@@ -1,0 +1,92 @@
+{
+    "Name": "Default",
+    "Theme": "AAAAAQAAAAAAAAAA/////wAAAAAZAAAABQAAAAAB/////52dAAAAAAAAAAEAAAAAAf//f39/f39/AAAAAAAFAAAAAQH//xkZNTVJSQAAAAAABQAAAAIB//9aWlpaWloAAAAAAAUAAAADAf//S0tLS0tLAAAAAAAFAAAABAH//yMjIyMjIwAAAAAABQAAAAUB//8tLS0tLS0AAAAAAAUAAAAGAf//////////AAAAAAABAAAABgH//39/f39/fwAAAAAABQAAAAcB/////wAAAAAAAAAAAAUAAAAIAf//////////AAAAAAABAAAACAH//39/f39/fwAAAAAABQAAAAkB//8NDTo6WFgAAAAAAAUAAAAKAf//GRk1NUlJAAAAAAAFAAAACwH//xQUFBQUFAAAAAAABQAAAAwB//8aGlVVkZEAAAAAAAEAAAAMAf//UFBQUFBQAAAAAAAFAAAADQH/////xsYAAAAAAAAAAQAAAA0B//9/f39/f38AAAAAAAUAAAAOAf//KiqCgtraAAAAAAAFAAAADwH//4KCKira2gAAAAAABQAAABAB//8QEEhIbW0AAAAAAAUAAAASAf//////////AAAAAAAFAAAAEwH//zU1NTU1NQAAAAAABQAAABQB//8qKv//398AAAAAAAH/////AAAAEgBGAHIAZQBlAFMAZQByAGkAZgAAAAgAQgBvAGwAZEAkAAAAAAAA/////wUAAQK8EAAAAQAAAAAAAAAAAAAAAAABAAAAEgBGAHIAZQBlAFMAZQByAGkAZg==",
+    "Version": 1,
+    "Widgets": [
+        {
+            "SplitterVertical": {
+                "State": "AAAA/wAAAAEAAAADAAAAGgAAAsYAAAAWAP////8BAAAAAgA=",
+                "Widgets": [
+                    {
+                        "SplitterHorizontal": {
+                            "State": "AAAA/wAAAAEAAAAFAAAAbwAABJwAAABGAAAAqQAAAVoA/////wEAAAABAA==",
+                            "Widgets": [
+                                {
+                                    "PlayerControls": {
+                                    }
+                                },
+                                {
+                                    "SeekBar": {
+                                        "ElapsedTotal": false,
+                                        "ShowLabels": true
+                                    }
+                                },
+                                {
+                                    "PlaylistControls": {
+                                    }
+                                },
+                                {
+                                    "VolumeControls": {
+                                        "Mode": 3
+                                    }
+                                },
+                                {
+                                    "SearchBar": {
+                                        "AutoSearch": true,
+                                        "SearchMode": 0,
+                                        "Widgets": "955f29805de446d7a9b6195a94bfd817|34777508a4ae4ec5939620f235e8ec1a|4fee1a754b3e47ff86f4c711fbf0f0eb|3b20c1db282d4bfe9a95c776e6723608"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "SplitterHorizontal": {
+                            "State": "AAAA/wAAAAEAAAADAAABdAAABGgAAAFgAP////8BAAAAAQA=",
+                            "Widgets": [
+                                {
+                                    "SplitterVertical": {
+                                        "State": "AAAA/wAAAAEAAAACAAACFgAAAYcA/////wEAAAACAA==",
+                                        "Widgets": [
+                                            {
+                                                "SelectionInfo": {
+                                                    "AlternatingRows": true,
+                                                    "Options": 23,
+                                                    "ShowHeader": true,
+                                                    "ShowHorizontalScrollbar": false,
+                                                    "ShowVerticalScrollbar": true,
+                                                    "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXgAAAACAAAAAQAAAAABAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAZAAAAAEAAAAAAAABFAAAAAEAAAABAAAD6AAAAABkAAAAAAAAAAAAAAAAAAAAAQ=="
+                                                }
+                                            },
+                                            {
+                                                "Lyrics": {
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Playlist": {
+                                        "Columns": "8:132|3|0:2|1|7:2",
+                                        "HeaderState": "AAAAZXjaY2BgYGVgYMhjgIDlDAxM+4D0UgaIOAgwAzELEDMCMRNI3H7HMcOeZIlj9jcCX7fK7QiyP7Q7qWh/J5P94znPLc8Vz7U/lPv8/lUZNZAGhv9AAAA15hst",
+                                        "ID": "6231ae7975e244929005108fa694fda5",
+                                        "Preset": 0,
+                                        "SingleMode": false
+                                    }
+                                },
+                                {
+                                    "PlaylistOrganiser": {
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "StatusBar": {
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
