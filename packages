@@ -5,6 +5,7 @@ arduino-cli
 arm-none-eabi-gcc
 arm-none-eabi-gdb
 arm-none-eabi-newlib
+awww
 base
 base-devel
 bat
@@ -74,7 +75,6 @@ slurp
 sqlitebrowser
 stlink
 stow
-swww
 tealdeer
 thunar
 thunar-archive-plugin
@@ -100,4 +100,3 @@ yay-debug
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
-
