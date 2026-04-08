@@ -10,6 +10,7 @@ base
 base-devel
 bat
 bc
+bear
 bluez
 btop
 calf
@@ -18,6 +19,7 @@ clang
 cliphist
 cmake
 dfu-util
+dosfstools
 easyeffects
 efibootmgr
 eza
@@ -39,12 +41,14 @@ hyprpicker
 hyprpolkitagent
 hyprshade
 hyprshot
+keepassxc
 kitty
 less
 libva-nvidia-driver
 linux
 linux-firmware
 linux-headers
+man-db
 materia-gtk-theme
 neovim
 networkmanager
@@ -71,7 +75,10 @@ qt6-wayland
 ripgrep
 rofi
 rustup
+sigrok-cli
+sigrok-firmware-fx2lafw
 slurp
+smartmontools
 sqlitebrowser
 stlink
 stow
@@ -80,6 +87,9 @@ thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+tmux
+tmux-plugin-manager
+tree
 ttf-cascadia-code-nerd
 ttf-jetbrains-mono-nerd
 ttf-meslo-nerd
@@ -90,6 +100,7 @@ unzip
 usbutils
 vim
 waybar
+webkit2gtk-4.1
 wget
 wireplumber
 woff2-font-awesome
