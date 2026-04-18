@@ -55,11 +55,29 @@
                                                     "ShowHeader": true,
                                                     "ShowHorizontalScrollbar": false,
                                                     "ShowVerticalScrollbar": true,
-                                                    "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXgAAAACAAAAAQAAAAABAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAZAAAAAEAAAAAAAABFAAAAAEAAAABAAAD6AAAAABkAAAAAAAAAAAAAAAAAAAAAQ=="
+                                                    "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAd0AAAACAAAAAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAZAAAAAEAAAAAAAABeQAAAAEAAAACAAAD6AAAAAF5AAAAAAAAAAAAAAAAAAAAAQ=="
                                                 }
                                             },
                                             {
                                                 "Lyrics": {
+                                                    "Alignment": 132,
+                                                    "BaseFont": "",
+                                                    "BottomMargin": 20,
+                                                    "EdgeFadeMode": 1,
+                                                    "EdgeFadeSize": 10,
+                                                    "LeftMargin": 20,
+                                                    "LineFont": "",
+                                                    "LineSpacing": 5,
+                                                    "NoLyricsScript": "[Artist: %artist%$crlf(2)][Album: %album%$crlf(2)]Title: %title%",
+                                                    "RightMargin": 20,
+                                                    "ScrollDuration": 500,
+                                                    "ScrollMode": 2,
+                                                    "SeekOnClick": true,
+                                                    "ShowScrollbar": true,
+                                                    "TopMargin": 20,
+                                                    "UseCustomColours": false,
+                                                    "WordFont": "",
+                                                    "WordLineFont": ""
                                                 }
                                             }
                                         ]
@@ -68,7 +86,7 @@
                                 {
                                     "Playlist": {
                                         "Columns": "8:132|3|0:2|1|7:2",
-                                        "HeaderState": "AAAAZXjaY2BgYGVgYMhjgIDlDAxM+4D0UgaIOAgwAzELEDMCMRNI3H7HMcOeZIlj9jcCX7fK7QiyP7Q7qWh/J5P94znPLc8Vz7U/lPv8/lUZNZAGhv9AAAA15hst",
+                                        "HeaderState": "AAAAZXjaY2BgYGVgYAhgYGBUBtKVDAxMokC6nAEiDgLMQMwIxCxAzAQSt9/4+dSdkpDd9hc8hPU1E2Xsd6te1b77Ps7+7hHFL0leWva7tnZn1vNdAmli+A8EANFAGPI=",
                                         "ID": "6231ae7975e244929005108fa694fda5",
                                         "Preset": 0,
                                         "SingleMode": false

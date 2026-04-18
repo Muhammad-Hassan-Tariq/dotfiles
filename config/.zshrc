@@ -184,6 +184,11 @@ export MOZ_DISABLE_RDD_SANDBOX=1                 # Helps NVIDIA hardware decodin
 export EGL_PLATFORM=wayland                      # Forces the correct rendering backend
 
 # -----------------------------
+# Other Environment Variables
+# -----------------------------
+export JAVA_TOOL_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
+
+# -----------------------------
 # Powerlevel10k Configuration
 # -----------------------------
 # Load user-specific Powerlevel10k settings if available
