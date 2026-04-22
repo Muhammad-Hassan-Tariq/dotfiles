@@ -138,6 +138,32 @@ cpprun() {
     fi
 }
 
+# Compile & Upload Arduino Code
+arduino-flash() {
+    local BOARD_TYPE=$1
+    local TARGET=${2:-.}
+    local PORT="/dev/ttyUSB0"  # Default Nano port
+    local FQBN=""
+
+    case $BOARD_TYPE in
+        nano)
+            FQBN="arduino:avr:nano:cpu=atmega328old"
+            PORT="/dev/ttyUSB0"
+            ;;
+        uno)
+            FQBN="arduino:avr:uno"
+            PORT="/dev/ttyACM0"  # Unos usually show up as ACM0 on Arch
+            ;;
+        *)
+            echo "Usage: up [nano|uno] (filename)"
+            return 1
+            ;;
+    esac
+
+    echo "Building and uploading to $BOARD_TYPE on $PORT..."
+    arduino-cli compile --upload -p "$PORT" --fqbn "$FQBN" "$TARGET"
+}
+
 # The "Cheat Sheet" via `curl`
 cheat() { curl -s cheat.sh/"$*" }
 
