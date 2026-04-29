@@ -1,4 +1,4 @@
-⚡ Dotfiles
+# ⚡ Dotfiles
 
 Minimal, fast, and aesthetic Linux setup built for a keyboard-driven workflow.
 
