@@ -92,7 +92,7 @@ alias la='eza -A --icons --color=always --group-directories-first'          # sh
 alias ll='eza -l --icons --color=always --group-directories-first'          # list files
 alias lla='eza -la --icons --color=always --group-directories-first'        # list hidden files
 alias lg='eza -la --icons --color=always --group-directories-first --git'   # show git files
-alias ld='eza -ld .*'                                                     # show dotfiles only
+alias ld='eza -ld .*'                                                       # show dotfiles only
 
 alias lt='eza --tree --icons --color=always --group-directories-first'                 # show tree
 alias lt2='eza --tree --icons --level=2 --color=always --group-directories-first'      # show tree 2 levels deep
@@ -106,21 +106,14 @@ alias lsca='/bin/ls -la --group-directories-first | wl-copy'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-# Start Trilium Notes Server Instance
-alias runtr='cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh'
-
-# Update & push dotfiles to Github
-alias dotsync='git -C $HOME/dotfiles add . && git -C $HOME/dotfiles commit -m "Updated" && git -C $HOME/dotfiles push'
-
-# Downloading shortcut using aria2c
-alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"
+alias runtr='cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh'                                                   # Start Trilium Notes Server Instance
+alias dotsync='git -C $HOME/dotfiles add . && git -C $HOME/dotfiles commit -m "Updated" && git -C $HOME/dotfiles push'   # Update & push dotfiles to Github
+alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"                                             # Downloading shortcut using aria2c
 
 # Shortcuts to EDIT Configs
 alias e_h='nvim $HOME/.config/hypr/hyprland.conf'
 alias e_z='nvim $HOME/.zshrc'
 
-# The Fuck
-eval $(thefuck --alias)
 
 # Compile & Execute main.cpp File
 cpprun() {
@@ -220,9 +213,13 @@ if command -v zoxide &> /dev/null; then
     alias cd='z'  # Optional: replace cd with z
 fi
 
+eval $(thefuck --alias) # The Fuck
+
 # -----------------------------
 # Environment Variables
 # -----------------------------
+export EDITOR=nvim
+
 # -----------------------------
 # Browser & GUI Optimizations
 # -----------------------------
@@ -232,24 +229,10 @@ export MOZ_DISABLE_RDD_SANDBOX=1                 # Helps NVIDIA hardware decodin
 export EGL_PLATFORM=wayland                      # Forces the correct rendering backend
 
 # -----------------------------
-# Other Environment Variables
-# -----------------------------
-export EDITOR=nvim
-
-# -----------------------------
 # Powerlevel10k Configuration
 # -----------------------------
 # Load user-specific Powerlevel10k settings if available
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-# Colorize 'less' and 'man' pages (Pure eye-candy)
-export LESS_TERMCAP_mb=$'\E[1;31m'   # blink -> red
-export LESS_TERMCAP_md=$'\E[1;36m'   # bold -> cyan
-export LESS_TERMCAP_me=$'\E[0m'      # reset
-export LESS_TERMCAP_so=$'\E[01;33m'  # standout -> yellow
-export LESS_TERMCAP_se=$'\E[0m'      # reset
-export LESS_TERMCAP_us=$'\E[1;32m'   # underline -> green
-export LESS_TERMCAP_ue=$'\E[0m'      # reset
 
 # Smart Sorting and Comments
 setopt numericglobsort
@@ -259,4 +242,3 @@ setopt nonomatch
 # ============================================================
 # End of .zshrc
 # ============================================================
-
