@@ -1,5 +1,5 @@
 # ============================================================
-# Hassan's Hybrid .zshrc for Arch + Powerlevel10k + Hyprland
+# The Eagle's Hybrid .zshrc for Arch Linux
 # ============================================================
 
 # -----------------------------
@@ -21,7 +21,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # -----------------------------
 
 HISTFILE=~/.zsh_history          # location of the history file
-HISTFILESIZE=100000              # history limit of the file on disk
+HISTFILESIZE=500000              # history limit of the file on disk
 HISTSIZE=500000                  # current session's history limit
 SAVEHIST=500000                  # zsh saves this many lines from the in-memory history list to the history file upon shell exit
 unsetopt EXTENDED_HISTORY        # Write the history file in the ":start:elapsed;command" format.
@@ -33,6 +33,12 @@ setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
 setopt HIST_IGNORE_SPACE         # Don\'t record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don\'t write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+
+setopt autocd                                      # type directory name to cd into it
+WORDCHARS=${WORDCHARS//\/}                         # slashes don't break word jumping
+PROMPT_EOL_MARK=""                                 # hide '%' when output lacks newline
+alias history="history 0"                          # show full history with 'history'
+TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'  # better time command output
 
 # -----------------------------
 # Completion Settings
@@ -49,22 +55,48 @@ if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdu
   zcompile "$zcompdump"
 fi
 
-# Menu-style completion and matching
-zstyle ':completion:*:*:*:*:*' menu select
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' verbose true
+# -----------------------------
+# Enhanced Completion 
+# -----------------------------
+zstyle ':completion:*' completer _expand _complete
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
+zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+# -----------------------------
+# Keybindings (Kali-inspired)
+# -----------------------------
+bindkey -e                                        # emacs key bindings
+bindkey ' ' magic-space                           # do history expansion on space
+bindkey '^U' backward-kill-line                   # ctrl + U delete entire line
+bindkey '^[[3;5~' kill-word                       # ctrl + Delete
+bindkey '^[[3~' delete-char                       # Delete key
+bindkey '^[[1;5C' forward-word                    # ctrl + Right Arrow
+bindkey '^[[1;5D' backward-word                   # ctrl + Left Arrow
+bindkey '^[[5~' beginning-of-buffer-or-history    # Page Up
+bindkey '^[[6~' end-of-buffer-or-history          # Page Down
+bindkey '^[[H' beginning-of-line                  # Home key
+bindkey '^[[F' end-of-line                        # End key
+bindkey '^[[Z' undo                               # Shift + Tab (undo last action)
 
 # -----------------------------
 # Aliases
 # -----------------------------
 # EZA Command
-alias ls='eza --icons --color=always --group-directories-first'
-alias la='eza -A --icons --color=always --group-directories-first'
-alias ll='eza -l --icons --color=always --group-directories-first'
-alias lla='eza -la --icons --color=always --group-directories-first'
-alias lg='eza -la --icons --color=always --group-directories-first --git'
-alias tree='eza --tree --icons --color=always --group-directories-first'
+alias ls='eza --icons --color=always --group-directories-first'             # show files
+alias la='eza -A --icons --color=always --group-directories-first'          # show hidden files
+alias ll='eza -l --icons --color=always --group-directories-first'          # list files
+alias lla='eza -la --icons --color=always --group-directories-first'        # list hidden files
+alias lg='eza -la --icons --color=always --group-directories-first --git'   # show git files
+alias ld='eza -ld .*'                                                     # show dotfiles only
+
+alias lt='eza --tree --icons --color=always --group-directories-first'                 # show tree
+alias lt2='eza --tree --icons --level=2 --color=always --group-directories-first'      # show tree 2 levels deep
+
 
 alias treec='eza --tree --icons --color=always --group-directories-first | wl-copy'
 alias lsc='/bin/ls -l --group-directories-first | wl-copy'
@@ -73,12 +105,6 @@ alias lsca='/bin/ls -la --group-directories-first | wl-copy'
 # CD Command
 alias ..='cd ..'
 alias ...='cd ../..'
-
-# Fuzzy Finder with Preview
-alias ff='fd --type f | fzf --preview "bat --color=always --style=header,grid {}"'
-
-# Search History with Fuzzy Finder
-alias ffh='cat $HOME/.zsh_history | fzf | wl-copy'
 
 # Start Trilium Notes Server Instance
 alias runtr='cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh'
@@ -182,22 +208,17 @@ if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; th
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'  # Light gray suggestions
 fi
 
-# -----------------------------
-# Keybindings (Emacs-style)
-# -----------------------------
-# Navigation and editing shortcuts
-bindkey -e                          # Use emacs keybindings
-bindkey '^U' backward-kill-line     # Ctrl+U to delete entire line
-bindkey '^[[1;5C' kill-word         # Ctrl+Delete
-bindkey '^[[3~' delete-char         # Delete key
-bindkey '^L' forward-word           # Ctrl+L
-bindkey '^H' backward-word          # Ctrl+H
-bindkey '^[[H' beginning-of-line    # Home
-bindkey '^[[F' end-of-line          # End
-bindkey '^_ ' undo                  # Ctrl+_ to undo
-bindkey '\eOP' forward-char         # Ctrl+E Autocomplete & Execute
-bindkey '\eOQ' autosuggest-execute  # Ctrl+E Autocomplete & Execute
-bindkey '^I' expand-or-complete     # Tab Completion
+# FZF key bindings and completion
+if [ -f /usr/share/fzf/key-bindings.zsh ]; then
+    source /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+fi
+
+# Smart directory jumping
+if command -v zoxide &> /dev/null; then
+    eval "$(zoxide init zsh)"
+    alias cd='z'  # Optional: replace cd with z
+fi
 
 # -----------------------------
 # Environment Variables
