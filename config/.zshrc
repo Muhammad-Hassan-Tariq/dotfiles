@@ -56,7 +56,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' verbose true
 
 # -----------------------------
-# Aliases and LS Colors
+# Aliases
 # -----------------------------
 # EZA Command
 alias ls='eza --icons --color=always --group-directories-first'
@@ -66,9 +66,9 @@ alias lla='eza -la --icons --color=always --group-directories-first'
 alias lg='eza -la --icons --color=always --group-directories-first --git'
 alias tree='eza --tree --icons --color=always --group-directories-first'
 
-alias treecpy='/bin/tree | wl-copy'
-alias lscpy='/bin/ls -l --group-directories-first | wl-copy'
-alias lscpyall='/bin/ls -la --group-directories-first | wl-copy'
+alias treec='eza --tree --icons --color=always --group-directories-first | wl-copy'
+alias lsc='/bin/ls -l --group-directories-first | wl-copy'
+alias lsca='/bin/ls -la --group-directories-first | wl-copy'
 
 # CD Command
 alias ..='cd ..'
@@ -78,7 +78,7 @@ alias ...='cd ../..'
 alias ff='fd --type f | fzf --preview "bat --color=always --style=header,grid {}"'
 
 # Search History with Fuzzy Finder
-alias ffhist='cat $HOME/.zsh_history | fzf | wl-copy'
+alias ffh='cat $HOME/.zsh_history | fzf | wl-copy'
 
 # Start Trilium Notes Server Instance
 alias runtr='cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh'
@@ -90,11 +90,11 @@ alias dotsync='git -C $HOME/dotfiles add . && git -C $HOME/dotfiles commit -m "U
 alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"
 
 # Shortcuts to EDIT Configs
-alias e_hyprland='nvim $HOME/.config/hypr/hyprland.conf'
-alias e_zshrc='nvim $HOME/.zshrc'
+alias e_h='nvim $HOME/.config/hypr/hyprland.conf'
+alias e_z='nvim $HOME/.zshrc'
 
-# CPP Workspace
-alias CPP_WORKSPACE='nvim "$HOME/programming/__eagle__ cortex/main.cpp"'
+# The Fuck
+eval $(thefuck --alias)
 
 # Compile & Execute main.cpp File
 cpprun() {

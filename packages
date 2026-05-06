@@ -1,6 +1,7 @@
 7zip
 amd-ucode
 arduino-cli
+aria2
 arm-none-eabi-gcc
 arm-none-eabi-gdb
 arm-none-eabi-newlib
@@ -14,14 +15,11 @@ bc
 bear
 bluez
 btop
-calf
-cava
 clang
 cliphist
 cmake
 dfu-util
 dosfstools
-easyeffects
 efibootmgr
 eza
 fastfetch
@@ -34,7 +32,6 @@ git
 gnome-themes-extra
 greetd
 greetd-tuigreet
-grim
 grub
 gvfs
 gvfs-mtp
@@ -63,7 +60,6 @@ okular
 openocd
 pacman-contrib
 papirus-icon-theme
-pavucontrol
 perl-file-mimeinfo
 php
 php-fpm
@@ -81,16 +77,15 @@ ripgrep
 rustup
 sigrok-cli
 sigrok-firmware-fx2lafw
-slurp
 smartmontools
 sqlitebrowser
 stlink
 stm32cubemx
 stow
 tealdeer
+thefuck
 thunar
 tmux
-tree
 ttf-cascadia-code-nerd
 ttf-jetbrains-mono-nerd
 ttf-meslo-nerd

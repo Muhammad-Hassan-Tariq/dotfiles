@@ -3,8 +3,6 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("i", "jj", "<Esc>", { desc = "Exit Insert Mode" })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { silent = true })
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
 
 -- Delete word backward (Ctrl+Backspace) in insert mode
 vim.keymap.set("i", "<C-H>", "<C-o>db", { noremap = true, silent = true })
