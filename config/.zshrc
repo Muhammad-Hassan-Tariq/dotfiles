@@ -52,7 +52,7 @@ compinit -u
 # Compile the completion dump to binary for even more speed
 zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
 if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
-  zcompile "$zcompdump"
+    zcompile "$zcompdump"
 fi
 
 # -----------------------------
@@ -164,7 +164,7 @@ cpprun() {
 arduino-flash() {
     local board_type=$1
     local fqbn=""
-    
+
     case $board_type in
         nano) fqbn="arduino:avr:nano:cpu=atmega328" ;;
         uno)  fqbn="arduino:avr:uno" ;;
@@ -173,17 +173,17 @@ arduino-flash() {
 
     # Use 'command ls' to bypass color aliases and get raw text
     local port=$(command ls /dev/ttyUSB* 2>/dev/null | head -n 1)
-    
+
     if [ -z "$port" ]; then
         echo "💀 No device found on /dev/ttyUSB*"
         return 1
     fi
 
     echo "✅ Found: $port | FQBN: $fqbn"
-    
+
     # stty should work now that $port is clean text
     stty -F "$port" hupcl 
-    
+
     arduino-cli compile --upload -v -p "$port" --fqbn "$fqbn" .
 }
 
@@ -213,6 +213,18 @@ fi
 # Smart directory jumping
 if command -v zoxide &> /dev/null; then
     eval "$(zoxide init zsh)"
+fi
+
+# FZF Auto Tab Completion
+if [ -f /usr/share/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh ]; then
+    source /usr/share/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+
+    # 1. Preview directory tree when tabbing after 'cd'
+    zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons --color=always $realpath'
+    # 2. Preview file contents (code) when tabbing after 'nvim', 'cat', or 'bat'
+    zstyle ':fzf-tab:complete:*:*' fzf-preview 'bat --color=always --style=numbers --line-range :500 $realpath 2>/dev/null || eza -1 --icons --color=always $realpath 2>/dev/null'
+    # 3. Switch the UI to a cleaner look with rounded borders
+    zstyle ':fzf-tab:*' fzf-flags --height=40% --border=rounded --layout=reverse --color=header:italic
 fi
 
 # -----------------------------
