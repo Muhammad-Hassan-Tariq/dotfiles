@@ -21,9 +21,9 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # -----------------------------
 
 HISTFILE=~/.zsh_history          # location of the history file
-HISTFILESIZE=500000              # history limit of the file on disk
-HISTSIZE=500000                  # current session's history limit
-SAVEHIST=500000                  # zsh saves this many lines from the in-memory history list to the history file upon shell exit
+HISTFILESIZE=50000               # history limit of the file on disk
+HISTSIZE=50000                   # current session's history limit
+SAVEHIST=50000                   # zsh saves this many lines from the in-memory history list to the history file upon shell exit
 unsetopt EXTENDED_HISTORY        # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
@@ -98,13 +98,16 @@ alias lt='eza --tree --icons --color=always --group-directories-first'          
 alias lt2='eza --tree --icons --level=2 --color=always --group-directories-first'      # show tree 2 levels deep
 
 
-alias treec='eza --tree --icons --color=always --group-directories-first | wl-copy'
-alias lsc='/bin/ls -l --group-directories-first | wl-copy'
-alias lsca='/bin/ls -la --group-directories-first | wl-copy'
+alias ltc='eza --tree --icons --color=always --group-directories-first | wl-copy'
+alias lc='/bin/ls -l --group-directories-first | wl-copy'
+alias lca='/bin/ls -la --group-directories-first | wl-copy'
 
 # CD Command
 alias ..='cd ..'
 alias ...='cd ../..'
+
+# File Preview With FZF
+alias fp="fzf --preview 'bat --color=always --style=numbers --line-range :500 {}'" 
 
 alias runtr='cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh'                                                   # Start Trilium Notes Server Instance
 alias dotsync='git -C $HOME/dotfiles add . && git -C $HOME/dotfiles commit -m "Updated" && git -C $HOME/dotfiles push'   # Update & push dotfiles to Github
@@ -210,9 +213,11 @@ fi
 # Smart directory jumping
 if command -v zoxide &> /dev/null; then
     eval "$(zoxide init zsh)"
-    alias cd='z'  # Optional: replace cd with z
 fi
 
+# -----------------------------
+# Evaluations & Executions
+# -----------------------------
 eval $(thefuck --alias) # The Fuck
 
 # -----------------------------
