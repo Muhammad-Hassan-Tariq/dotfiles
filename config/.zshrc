@@ -82,6 +82,8 @@ bindkey '^[[6~' end-of-buffer-or-history          # Page Down
 bindkey '^[[H' beginning-of-line                  # Home key
 bindkey '^[[F' end-of-line                        # End key
 bindkey '^[[Z' undo                               # Shift + Tab (undo last action)
+bindkey '^[OP' autosuggest-accept                 # Accept autosuggestion  [F1]
+bindkey '^[OQ' autosuggest-execute                # Execute autosuggestion [F2]
 
 # -----------------------------
 # Aliases
@@ -110,8 +112,10 @@ alias ...='cd ../..'
 alias fp="fzf --preview 'bat --color=always --style=numbers --line-range :500 {}'" 
 
 alias runtr='cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh'                                                   # Start Trilium Notes Server Instance
-alias dotsync='git -C $HOME/dotfiles add . && git -C $HOME/dotfiles commit -m "Updated" && git -C $HOME/dotfiles push'   # Update & push dotfiles to Github
 alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"                                             # Downloading shortcut using aria2c
+
+alias dotpack="yay -Qe | awk '{print $1}' > $HOME/dotfiles/packages"                                                     # List all installed packages
+alias dotsync='git -C $HOME/dotfiles add . && git -C $HOME/dotfiles commit -m "Updated" && git -C $HOME/dotfiles push'   # Update & push dotfiles to Github
 
 # Shortcuts to EDIT Configs
 alias e_h='nvim $HOME/.config/hypr/hyprland.conf'

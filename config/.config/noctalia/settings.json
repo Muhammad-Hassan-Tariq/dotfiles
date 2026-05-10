@@ -155,7 +155,7 @@
                     "hideMode": "hidden",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
-                    "maxWidth": 150,
+                    "maxWidth": 175,
                     "panelShowAlbumArt": true,
                     "scrollingMode": "always",
                     "showAlbumArt": true,
@@ -254,13 +254,6 @@
                         "textColor": "none"
                     },
                     "id": "plugin:timer"
-                },
-                {
-                    "defaultSettings": {
-                        "precision": 8,
-                        "showBarValue": true
-                    },
-                    "id": "plugin:noctalia-calculator"
                 },
                 {
                     "defaultSettings": {
@@ -486,7 +479,7 @@
         ],
         "lockScreenTint": 0,
         "passwordChars": false,
-        "radiusRatio": 0.65,
+        "radiusRatio": 0.5,
         "reverseScroll": false,
         "scaleRatio": 0.9,
         "screenRadiusRatio": 1,
@@ -590,7 +583,7 @@
         "sounds": {
             "criticalSoundFile": "",
             "enabled": true,
-            "excludedApps": "discord,firefox,chrome,chromium,edge",
+            "excludedApps": "discord,firefox,chrome,chromium,edge,",
             "lowSoundFile": "",
             "normalSoundFile": "",
             "separateSounds": false,
