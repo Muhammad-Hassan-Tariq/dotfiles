@@ -152,7 +152,7 @@
                 },
                 {
                     "compactMode": true,
-                    "hideMode": "hidden",
+                    "hideMode": "visible",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
                     "maxWidth": 175,
@@ -254,6 +254,13 @@
                         "textColor": "none"
                     },
                     "id": "plugin:timer"
+                },
+                {
+                    "defaultSettings": {
+                        "precision": 8,
+                        "showBarValue": true
+                    },
+                    "id": "plugin:noctalia-calculator"
                 },
                 {
                     "defaultSettings": {

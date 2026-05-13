@@ -111,7 +111,8 @@ alias ...='cd ../..'
 # File Preview With FZF
 alias fp="fzf --preview 'bat --color=always --style=numbers --line-range :500 {}'" 
 
-alias runtr='cd $HOME/tools/triliumNotes/triliumNotes && ./trilium.sh'                                                   # Start Trilium Notes Server Instance
+alias runtr='systemctl start trilium-next-server.service'                                                                # Start Trilium Notes Server Instance
+alias stoptr='systemctl stop trilium-next-server.service'                                                                # Stop Trilium Notes Server Instance   
 alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"                                             # Downloading shortcut using aria2c
 
 alias dotpack="yay -Qe | awk '{print $1}' > $HOME/dotfiles/packages"                                                     # List all installed packages
