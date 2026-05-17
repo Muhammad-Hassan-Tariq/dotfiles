@@ -17,8 +17,8 @@
                                 },
                                 {
                                     "SeekBar": {
-                                        "ElapsedTotal": false,
-                                        "ShowLabels": true
+                                        "ShowLabels": true,
+                                        "ShowRemainingTime": false
                                     }
                                 },
                                 {
@@ -34,6 +34,7 @@
                                     "SearchBar": {
                                         "AutoSearch": true,
                                         "SearchMode": 0,
+                                        "ShowAll": false,
                                         "Widgets": "955f29805de446d7a9b6195a94bfd817|34777508a4ae4ec5939620f235e8ec1a|4fee1a754b3e47ff86f4c711fbf0f0eb|3b20c1db282d4bfe9a95c776e6723608"
                                     }
                                 }
@@ -55,7 +56,7 @@
                                                     "ShowHeader": true,
                                                     "ShowHorizontalScrollbar": false,
                                                     "ShowVerticalScrollbar": true,
-                                                    "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYMAAAACAAAAAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAZAAAAAEAAAAAAAABHwAAAAEAAAACAAAD6AAAAAEfAAAAAAAAAAAAAAAAAAAAAQ=="
+                                                    "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAX8AAAACAAAAAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAZAAAAAEAAAAAAAABGwAAAAEAAAACAAAD6AAAAAEbAAAAAAAAAAAAAAAAAAAAAQ=="
                                                 }
                                             },
                                             {
@@ -63,6 +64,8 @@
                                                     "Alignment": 132,
                                                     "BaseFont": "",
                                                     "BottomMargin": 20,
+                                                    "CentreFirstSyncedLine": false,
+                                                    "CentreLastSyncedLine": true,
                                                     "EdgeFadeMode": 1,
                                                     "EdgeFadeSize": 10,
                                                     "LeftMargin": 20,
@@ -94,6 +97,10 @@
                                 },
                                 {
                                     "PlaylistOrganiser": {
+                                        "LeftScript": "%node_name%$if(%is_group%, \\[%count%\\],)",
+                                        "PlayingBackgroundColour": "",
+                                        "PlayingTextColour": "",
+                                        "RightScript": "$if($not(%is_group%),%count%)"
                                     }
                                 }
                             ]
