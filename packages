@@ -1,107 +1,107 @@
-7zip
-amd-ucode
-arduino-cli
-aria2
-arm-none-eabi-gcc
-arm-none-eabi-gdb
-arm-none-eabi-newlib
-avrdude
-awww
-base
-base-devel
-bat
-bear
-bluez
-btop
-clang
-cliphist
-cmake
-dfu-util
-dosfstools
-efibootmgr
-eza
-fastfetch
-fd
-ffmpegthumbnailer
-firefox
-fooyin-bin
-fzf
-fzf-tab
-gdb
-git
-gnome-themes-extra
-greetd
-greetd-tuigreet
-grub
-gvfs
-gvfs-mtp
-hyprland
-hyprshade
-hyprshot
-keepassxc
-kitty
-lazygit
-less
-libva-nvidia-driver
-linux
-linux-firmware
-linux-headers
-man-db
-neovim
-networkmanager
-nginx
-ninja
-noctalia-shell
-npm
-ntfs-3g
-nvidia-open-dkms
-nwg-look
-okular
-openocd
-pacman-contrib
-papirus-icon-theme
-perl-file-mimeinfo
-php
-php-fpm
-php-sqlite
-picocom
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-playerctl
-pulseview
-python-pip
-qt5-wayland
-qt6-wayland
-ripgrep
-rustup
-sigrok-cli
-sigrok-firmware-fx2lafw
-smartmontools
-sqlitebrowser
-stlink
-stm32cubemx
-stow
-tealdeer
-thefuck
-thunar
-tmux
-trilium-next-server-bin
-ttf-cascadia-code-nerd
-ttf-jetbrains-mono-nerd
-ttf-meslo-nerd
-ttf-nerd-fonts-symbols-common
-udisks2
-unzip
-usbutils
-webkit2gtk-4.1
-wget
-wireplumber
-woff2-font-awesome
-xdg-desktop-portal-hyprland
-yay
-yazi
-zoxide
-zsh
-zsh-autosuggestions
-zsh-syntax-highlighting
+7zip 26.01-1
+amd-ucode 20260410-1
+arduino-cli 1.4.1-1
+aria2 1.37.0-2
+arm-none-eabi-gcc 14.2.0-2
+arm-none-eabi-gdb 17.1-1
+arm-none-eabi-newlib 4.5.0.20241231-2
+avrdude 1:8.1-1
+awww 0.12.0-1
+base 3-3
+base-devel 1-2
+bat 0.26.1-2
+bear 4.1.3-1
+bluez 5.86-5
+btop 1.4.7-1
+clang 22.1.3-1
+cliphist 1:0.7.0-2
+cmake 4.3.2-1
+dfu-util 0.11-3
+dosfstools 4.2-5
+efibootmgr 18-3
+eza 0.23.4-3
+fastfetch 2.62.1-1
+fd 10.4.2-2
+ffmpegthumbnailer 2.3.0-1
+firefox 150.0.1-1
+fooyin-bin 0.10.6-1
+fzf 0.72.0-1
+fzf-tab 1.3.0-1
+gdb 17.1-5
+git 2.54.0-1
+gnome-themes-extra 1:3.28-1
+greetd 0.10.3-2
+greetd-tuigreet 0.9.1-2
+grub 2:2.14-1
+gvfs 1.60.0-2
+gvfs-mtp 1.60.0-2
+hyprland 0.54.3-4
+hyprshade 4.0.1-1
+hyprshot 1.3.0-4
+keepassxc 2.7.12-2
+kitty 0.46.2-1
+lazygit 0.61.1-1
+less 1:692-1
+libva-nvidia-driver 0.0.16-1
+linux 7.0.3.arch1-2
+linux-firmware 20260410-1
+linux-headers 7.0.3.arch1-2
+man-db 2.13.1-1
+neovim 0.12.2-1
+networkmanager 1.56.0-1
+nginx 1.30.0-2
+ninja 1.13.2-3
+noctalia-shell 4.7.6-1
+npm 11.13.0-1
+ntfs-3g 2022.10.3-2
+nvidia-open-dkms 595.71.05-2
+nwg-look 1.0.6-1
+okular 26.04.0-1
+openocd 1:0.12.0-5
+pacman-contrib 1.13.1-1
+papirus-icon-theme 20250501-1
+perl-file-mimeinfo 0.36-1
+php 8.5.5-1
+php-fpm 8.5.5-1
+php-sqlite 8.5.5-1
+picocom 3.1-3
+pipewire-alsa 1:1.6.4-1
+pipewire-jack 1:1.6.4-1
+pipewire-pulse 1:1.6.4-1
+playerctl 2.4.1-5
+pulseview 0.4.2-20
+python-pip 26.1-1
+qt5-wayland 5.15.18+kde+r55-1
+qt6-wayland 6.11.0-1
+ripgrep 15.1.0-2
+rustup 1.29.0-2
+sigrok-cli 0.7.2-3
+sigrok-firmware-fx2lafw 0.1.7-1
+smartmontools 7.5-1
+sqlitebrowser 3.13.1-3
+stlink 1.8.0.r121.g8c34a4e-1
+stm32cubemx 6.17.0-3
+stow 2.4.1-1
+tealdeer 1.8.1-2
+thefuck 3.32-12
+thunar 4.20.8-3
+tmux 3.6_a-1
+trilium-next-server-bin 0.101.3-2
+ttf-cascadia-code-nerd 3.4.0-2
+ttf-jetbrains-mono-nerd 3.4.0-2
+ttf-meslo-nerd 3.4.0-2
+ttf-nerd-fonts-symbols-common 3.4.0-1
+udisks2 2.11.1-2
+unzip 6.0-23
+usbutils 019-1
+webkit2gtk-4.1 2.52.3-1
+wget 1.25.0-3
+wireplumber 0.5.14-1
+woff2-font-awesome 7.2.0-1
+xdg-desktop-portal-hyprland 1.3.12-2
+yay 12.5.7-1
+yazi 26.1.22-4
+zoxide 0.9.9-2
+zsh 5.9-6
+zsh-autosuggestions 0.7.1-1
+zsh-syntax-highlighting 0.8.0-2
