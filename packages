@@ -46,6 +46,7 @@ libva-nvidia-driver 0.0.16-1
 linux 7.0.3.arch1-2
 linux-firmware 20260410-1
 linux-headers 7.0.3.arch1-2
+localsend-bin 1.17.0-1
 man-db 2.13.1-1
 neovim 0.12.2-1
 networkmanager 1.56.0-1
