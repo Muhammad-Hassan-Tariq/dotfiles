@@ -45,6 +45,10 @@ TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'  # better time command output
 # -----------------------------
 # Faster completion loading ⚡
 autoload -Uz compinit
+
+# Case-insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # Ignore insecure directories (important if you’re using Arch + Hyprland + powerlevel10k)
 zstyle ':completion:*' rehash true
 compinit -u

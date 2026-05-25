@@ -25,7 +25,8 @@
             "btop",
             "org.keepassxc.KeePassXC",
             "thunar",
-            "sqlitebrowser"
+            "sqlitebrowser",
+            "localsend"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",

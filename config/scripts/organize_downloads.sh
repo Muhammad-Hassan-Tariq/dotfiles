@@ -4,7 +4,7 @@
 #  Hassan's Downloads Organizer - Firmware & CS Edition
 # =================================================================
 
-TARGET_DIR="$HOME/downloads"
+TARGET_DIR="$HOME/Downloads"
 cd "$TARGET_DIR" || exit
 
 echo "🔧 Organizing $TARGET_DIR for a clean workspace..."
