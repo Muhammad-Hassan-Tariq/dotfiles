@@ -113,7 +113,7 @@
                 {
                     "colorizeSystemIcon": "none",
                     "colorizeSystemText": "none",
-                    "customIconPath": "/home/eagle/downloads/web/logo.svg",
+                    "customIconPath": "/home/eagle/Downloads/web/logo.svg",
                     "enableColorization": false,
                     "icon": "rocket",
                     "iconColor": "none",
