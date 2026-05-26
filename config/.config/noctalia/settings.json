@@ -24,7 +24,6 @@
             "org.sigrok.PulseView",
             "btop",
             "org.keepassxc.KeePassXC",
-            "thunar",
             "sqlitebrowser",
             "localsend"
         ],
