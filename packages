@@ -23,7 +23,6 @@ eza 0.23.4-3
 fastfetch 2.63.1-1
 fd 10.4.2-2
 ffmpegthumbnailer 2.3.0-1
-firefox 151.0.1-1
 fooyin-bin 0.10.6-1
 fzf 0.72.0-1
 fzf-tab 1.3.0-2
@@ -42,6 +41,7 @@ keepassxc 2.7.12-3
 kitty 0.46.2-1
 lazygit 0.61.1-1
 less 1:692-1
+librewolf-bin 1:151.0.1_2-1
 libva-nvidia-driver 0.0.17-1
 linux 7.0.10.arch1-1
 linux-firmware 20260519-1
