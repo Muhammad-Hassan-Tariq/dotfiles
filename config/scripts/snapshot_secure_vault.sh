@@ -5,8 +5,7 @@ set -e
 SRC="$HOME/.secure_vault"
 SNAPS="$HOME/.secure_vault/.snapshots"
 
-mkdir -p "$SNAPS/n-1" "$SNAPS/n-2" "$SNAPS/n-3"
-
+mkdir -p "$SNAPS/n-1" "$SNAPS/n-2"
 # shift snapshots safely
 rm -rf "$SNAPS/n-2/"*
 mv "$SNAPS/n-1/"* "$SNAPS/n-2/" 2>/dev/null
