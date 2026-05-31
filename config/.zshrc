@@ -48,7 +48,6 @@ autoload -Uz compinit
 
 # Case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-
 # Ignore insecure directories (important if you’re using Arch + Hyprland + powerlevel10k)
 zstyle ':completion:*' rehash true
 compinit -u
@@ -104,7 +103,7 @@ alias lt='eza --tree --icons --color=always --group-directories-first'          
 alias lt2='eza --tree --icons --level=2 --color=always --group-directories-first'      # show tree 2 levels deep
 
 
-alias ltc='eza --tree --icons --color=always --group-directories-first | wl-copy'
+alias ltc='eza --tree --icons=never --color=never | wl-copy'
 alias lc='/bin/ls -l --group-directories-first | wl-copy'
 alias lca='/bin/ls -la --group-directories-first | wl-copy'
 
