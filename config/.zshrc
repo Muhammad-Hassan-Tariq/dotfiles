@@ -119,7 +119,7 @@ alias stoptr='systemctl stop trilium-next-server.service'                       
 alias dwld="aria2c -x 16 -s 16 --continue=true --retry-wait=2 --max-tries=0"                                             # Downloading shortcut using aria2c
 
 alias dotpack="yay -Qe | awk '{print $1}' > $HOME/dotfiles/packages"                                                     # List all installed packages
-alias dotsync='git -C $HOME/dotfiles add . && git -C $HOME/dotfiles commit -m "Updated" && git -C $HOME/dotfiles push'   # Update & push dotfiles to Github
+alias dotsync='yay -Qe | awk "{print $1}" > $HOME/dotfiles/packages && git -C $HOME/dotfiles add . && git -C $HOME/dotfiles commit -m "Updated" && git -C $HOME/dotfiles push'   # Update & push dotfiles to Github
 
 # Shortcuts to EDIT Configs
 alias e_h='nvim $HOME/.config/hypr/hyprland.conf'
