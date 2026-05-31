@@ -66,6 +66,7 @@ pipewire-alsa 1:1.6.5-2
 pipewire-jack 1:1.6.5-2
 pipewire-pulse 1:1.6.5-2
 playerctl 2.4.1-5
+proton-vpn-cli 1.0.1-1
 pulseview 0.4.2-20
 python-pip 26.1.1-1
 qt5-wayland 5.15.19+kde+r55-1
